@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframwork.org/schema/context
+ http://www.springframwork.org/schema/context/spring-context.xsd">
+ 
+ 
+ <!-- first way -->
+ <bean name="bref" class="sandip12.myfproject.ref.B">
+ <property name="y" value="3" />
+ </bean>
+ 
+ <bean name="aref" class="sandip12.myfproject.ref.A">
+ <property name="x" value="1" />
+ <property name="ob">
+ <ref bean="bref" />
+ </property>
+ </bean>
+ 
+ 
+ <!-- second way of writting-->
+ 
+ <bean class="sandip12.myfproject.ref.B" name="cref" p:y="5" />
+ 
+ <bean class="sandip12.myfproject.ref.A" name="dref" p:x="7" p:ob-ref="cref" />
+ </beans>

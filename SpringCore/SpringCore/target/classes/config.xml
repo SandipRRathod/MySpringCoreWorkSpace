@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframwork.org/schema/context
+ http://www.springframwork.org/schema/context/spring-context.xsd">
+ 
+ 
+
+ 
+<!--  first way of creating bean-->
+ <bean class="sandip12.myfproject.student" name="student1">
+          <property name="studentId">
+           <value>1</value>
+           </property> 
+
+<property name="studentName"><value>Sandip Raju Rathod</value></property>
+
+<property name="studentAddress"><value>At post pathrud Tq dist jalna</value></property>
+ </bean>
+ 
+ 
+ <!--  second way of creating bean-->
+ <bean class="sandip12.myfproject.student" name="student2">
+<property name="studentId" value="2" />
+ <property name="studentName" value="Samadhan Rathod" />
+ <property name="studentAddress" value="pathrud" />
+ </bean>
+ 
+ <!--  third  way using p schema of creating bean-->
+ 
+ <bean class="sandip12.myfproject.student" name="student3" p:studentId="3" p:studentName="Pradip Raju Rathod" p:studentAddress="Pathrud"/>
+ 
+ 
+ </beans>

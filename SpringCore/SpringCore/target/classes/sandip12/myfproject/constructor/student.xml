@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframwork.org/schema/context http://www.springframwork.org/schema/context/spring-context.xsd">
+
+	<bean class="sandip12.myfproject.constructor.Certi" name="CertiName">
+		<constructor-arg value="income" />
+	</bean>
+	<bean class="sandip12.myfproject.constructor.student" name="StudentInfo">
+		<constructor-arg value="Sandip" />
+		<constructor-arg value="1" />
+		<constructor-arg ref="CertiName" />
+		<constructor-arg>
+			<list>
+				<value>7666883677</value>
+				<value>7875741814</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="java" value="spring" />
+				<entry key="c" value="springboot" />
+
+			</map>
+		</constructor-arg>
+
+	</bean>
+
+	<bean class="sandip12.myfproject.constructor.Addition" name="Addition">
+		<constructor-arg value="10.1" />
+		<constructor-arg value="20.0" />
+	</bean>
+
+
+</beans>
